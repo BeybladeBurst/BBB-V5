@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<script src="/include/common.js"></script>
+
+<title>陀螺商品 ￭ Products ｜ 戰鬥陀螺 爆烈世代 ￭ 爆旋陀螺 擊爆戰魂 ￭ Beyblade Burst ￭ ベイブレードバースト</title>
+<link rel=stylesheet href='products.css'>
+<style>
+    .groups h3 {
+        display:inline-block;
+    }
+    .groups h3::first-line {
+        font-size:1.1em;
+    }
+    .groups summary span {
+        display:block;
+        font-size:.85em;
+        opacity:.7;
+    }
+    code::before,code::after {
+        font-family:'Font Awesome 5 Free';font-weight:bold;
+        position:absolute;top:-.7em;
+    }
+    .right code::after {
+        content:"\f2f9";color:hsl(210,100%,50%);
+        right:-1.2em;
+    }
+    .left code::before {
+        content:"\f2ea";color:hsl(30,100%,50%);
+        left:-1.2em;
+    }
+</style>
+
+<nav><script>new nav(['home','prod'])</script></nav>
+<main>
+    <h1 style='display:none'>發射器</h1>
+    <article class='groups'>
+        <h2>拉線型</h2>
+    </article>
+</main>
+
+<script>
+for (const [abbr, launcher] of Object.entries({
+    CBL: {
+        name: 'Custom Bey launcher<br>カスタムベイランチャー',
+        desc: '能分解、改造的發射器，轉速最高',
+        colors: [
+            ['St r l', 'B-191', '3/4904810173755_9470127729424cbf95cd3906f975b8a3.jpg', {note: '<p>搭載轉速更高的<br>Power Gear unit<p>搭載拉線更長的<br>Long Core unit<p>搭載摩擦更低的<br>Bearing Spin unit'}],
+            ['S r l', 'B-187', 'C/4904810173724_93e2f0cab6494e3fbfbebc5958e754eb.jpg', {note: '<p>搭載轉速更高的<br>Power Gear unit<p>'}],
+            ['B r l', 'BBG-39', '/img/launcher/BBG-39L.jpg'],
+            ['B r l', 'BBG-39', '/img/launcher/BBG-39S.jpg'],
+            ['B r l', 'BBG-39', '/img/launcher/BBG-39F.jpg'],
+            ['B r l', 'B-184', '5/4904810173694_bc0a5844d25c4d31bf7810a32e835dfe.jpg'],
+            ['St r l', 'B-182', '1/4904810174615_bbd630018f1248a4be2a89fd7d00d7fe.jpg']]
+    },
+    LSBL: {
+        name: 'Long Sparking Bey launcher<br>ロングスパーキングベイランチャー',
+        desc: '附低温火花效果的發射器，拉線更長',
+        colors: [
+            ['St l', 'B-174', '1/4904810170389_15d68adca4c247298878a01959ebbddb.jpg', {error: '透明白'}],
+            ['St r', 'B-174', 'C/4904810170389_1a8fa85290274b9b95c2edee844483d1.jpg', {error: '透明金橙'}]]
+    },
+    SBL: {
+        name: 'Sparking Bey launcher<br>スパーキングベイランチャー',
+        desc: '附低温火花效果的發射器',
+        colors: [
+            ['B l', 'B-166', '5/4904810157243_46c915dbdf4d4dd6b7785f4bb155e8e8.jpg'],
+            ['S r', 'B-169', '1/4904810160267_b63f3ee93a5f49f6804cae5bca2e9af8.jpg'],
+            ['B r', 'B-165', '5/4904810157267_70006522d7e94fed945f814f5634f655.jpg']]
+    },
+    LBL: {
+        name: 'Long Bey launcher<br>ロングベイランチャー',
+        desc: '拉線更長的線型發射器',
+        colors: [
+            ['St l r', 'BBG-36', '/img/launcher/BBG-36LR.jpg'],
+            ['B l r', 'BBG-29'],
+            ['S l r', 'B-155', 'L/4904810144557_ef17cf875d634a48810bdb9547475f61.jpg', {error: '透明黑'}],
+            ['S l r', 'B-129', 'L/4904810499916_9aad2e9382c0449bb19530b91fc138a5.jpg'],
+
+            ['St l', 'BBG-36', '/img/launcher/BBG-36L.jpg'],
+            ['St l', 'BBG-31', '/img/launcher/BBG-31L.jpg'],
+            ['B l', 'BBG-24'],
+            ['B l', 'B-141', '5/4904810128670_36ed619bb0d544b1b0ccfb7b992df089.jpg'],
+            ['St l', 'B-124'],
+
+            ['St r', 'BBG-31', '/img/launcher/BBG-31R.jpg'],
+            ['B r', 'BBG-23'],
+            ['B r', 'B-137', '5/4904810123842_b6e5f558802e4a38b3b4fd093751d804.jpg', {error: '透明藍'}],
+            ['St r', 'B-123'],
+            ['L r', '<a href="https://www.giants.jp/G/gnews/news_3914036.html">Event</a>', '/img/launcher/giants.jpg']]
+    },
+    BL: {
+        name: 'Bey launcher<br>ベイランチャー',
+        desc: '標準拉線型發射器',
+        colors: [
+            ['B r l', 'BBG-17'],
+            ['B r l', 'B-119', '5/4904810118121_aea8193502af40589302de14e2e38d09.jpg'],
+            ['B r l', 'B-88', 'L/4904810895947.jpg'],
+
+            ['L l', 'みんなのくじ', 'https://prtimes.jp/i/5167/1056/resize/d5167-1056-995937-2.jpg'],
+            ['B l', 'BBG-09'],
+            ['B l', 'B-99', '5/4904810971757.jpg'],
+            ['S l', 'B-66', 'L/4904810872269.jpg'],
+
+            ['B r', 'BBG-03'],
+            ['S r', 'BBG-02'],
+            ['L r', '<a href="https://64.media.tumblr.com/44cd6cdf1bc4c18e81b6211003db0aa4/tumblr_inline_paz3griwTq1u0k8wo_500.jpg">Campaign</a>', '/img/launcher/aeon.jpg'],
+            ['St r', '超Ｚ改造セット<br>（コロコロver）', '/img/launcher/超Z改造.jpg'],
+            ['St r', '神改造セット<br>（コロコロver）', '/img/launcher/神改造.jpg'],
+            ['B r', 'B-108 B-16<br>BA-01', '5/4904810833383.jpg'],
+            ['B r', 'B-78', '5/4904810874874.jpg'],
+            ['St r', 'B-76'],
+            ['B r', 'B-39', '5/4904810860662.jpg'],
+            ['St r', 'B-38', '1/4904810847304.jpg'],
+            ['S r', 'B-23', '1/4904810833444.jpg'],
+            ['S r', 'B-14'],
+            ['St r', 'B-08 BA-01', '/img/launcher/B-08.jpg'],
+            ['L r', 'G2 賞品', '/img/launcher/BL-gold.jpg'],
+            ['L r', 'G2 賞品', '/img/launcher/BL-silver.jpg'],
+            ['L r', 'G2 賞品', '/img/launcher/BL-bronze.jpg']]
+    },
+    BLH: {
+        name: 'Heavy Bey launcher<br>ヘビーベイランチャー',
+        desc: '本體較重、拉線較短',
+        colors: [
+            ['St r', 'B-64', '4/4904810867944.jpg']]
+    },
+    BLS: {
+        name: 'Speed Bey launcher<br>スピードベイランチャー',
+        desc: '拉線較長',
+        colors: [
+            ['St r', 'B-65', '4/4904810867951.jpg']]
+    },
+    LLL: {
+        name: 'Long Light launcher / ＋ Longer winder<br>ロングライトランチャー',
+        desc: '附有更長拉條的發射器',
+        colors: [
+            ['St r l', 'BBG-35', 'https://pbs.twimg.com/media/EU_cVvUUMAMj4MV.jpg', {note: 'DW'}],
+            ['St r l', 'レジェンド<br>スターベイセット', 'https://dbcn1bdvswqbx.cloudfront.net/client_info/SHOPRO/itemimage/P57906001/P57906001_1b.jpg', {note: 'DW'}],
+            ['S r l', 'B-145', '2/4904810134411_bf334569bcc6417e836d8f626be70a23.jpg', {note: 'DW'}],
+            ['S r l', 'B-133', '2/4904810123798_1effa53cfdd643c88c7b0f6ec406b179.jpg', {note: 'DW'}],
+            ['S r', 'B-117', , {note: 'PW'}],
+            ['B r l', 'B-112', '5/4904810103493_95e9dbc7d99f45b9b26cf19ba1aebaee.jpg', {note: 'LW'}],
+            ['S r l', 'B-100', 'C/4904810965169.jpg', {note: 'LW'}],
+            ['S r l', 'BBG-13', , {note: 'LW'}],
+            ['B r', 'B-138', '5/4904810123859_b816c10a97df4fe494af53fca98e1ab5.jpg', {note: 'LW'}],
+            ['B r', 'B-45', 'https://item-shopping.c.yimg.jp/i/n/hfs05_4904810861102', {note: 'LW'}],
+            ['St r', 'B-22', '4/4904810833437.jpg', {note: 'LW'}]]
+    },
+    LL: {
+        name: 'Light launcher<br>ライトランチャー',
+        desc: '標準拉條型發射器',
+        colors: [
+            ['S r l', 'B-86', 'C/4904810895923.jpg'],
+            ['St l', 'B-190', '3/4904810186731_9ecb89c4e28c45089cfa71e217768bb1.jpg'],
+            ['St l', 'B-162', '2/4904810157212_f84c8fe026264627956fa95596dccb10.jpg', {error: '官方誤圖：右迴轉'}],
+            ['S l', 'B-139', '1/4904810123866_6994ce84fc4f45f183c53d416f077544.jpg'],
+            ['B l', 'B-81 BA-03', '5/4904810891154.jpg'],
+            ['St r', 'B-190', '2/4904810186731_2d29127c3b4b4211bc7daeddec723528.jpg'],
+            ['St r', 'B-162', '1/4904810157212_d247c54397fb423fa58187debfb7db45.jpg'],
+            ['St r', 'B-136', 'C/4904810123835_db16ef42084a4943b45d6e28d1f18dd1.jpg'],
+            ['St r', 'B-136', '1/4904810123835_424bb3a7d74f4763a31ba807fe19b795.jpg'],
+            ['St r', 'BA-03'],
+            ['St r', 'B-107 B-18', '2/4904810102984_f6a45a2162be4f67af7e8b17333452f6.jpg'],
+            ['St r', 'B-107 B-18', '1/4904810102984_85f0cb56cc3943ce8f1f93da1dccaef8.jpg'],
+            ['S r', 'B-59 B-41<br>B-35 B-34', '1/4904810847267.jpg'],
+            ['S r', 'B-31 B-12<br>B-04 B-03<br>B-02 B-01', '1/4904810847236.jpg'],
+            ['L r', '限定', '/img/launcher/LL-gold.jpg'],
+            ['L r', '限定', '/img/launcher/LL-silver.jpg'],
+            ['L r', '限定', '/img/launcher/LL-bronze.jpg']]
+    },
+    DSL: {
+        name: 'Digital sword launcher<br>デジタルソードランチャー',
+        desc: '能測量力度的電子發射器',
+        colors: [
+            ['B l r', 'B-94', '5/4904810896005.jpg'],
+            ['B l r', 'B-93', '5/4904810895992.jpg']]
+    },
+    SL: {
+        name: 'Sword launcher<br>ソードランチャー',
+        desc: '劍型發射器',
+        colors: [
+            ['B r', 'B-70', '5/4904810872313.jpg'],
+            ['S r', 'B-48', '1/4904810860686.jpg']]
+    },
+    EL: {
+        name: 'Entry launcher<br>エントリーランチャー',
+        desc: '試玩型發射器',
+        colors: [
+            ['S l', 'B-122 B-110<br>B-97 B-79', '1/4904810103479_942374c6de94485288fcbbe800ac3501.jpg'],
+            ['S r', 'B-127 B-120<br>B-105 B-104', 'C/4904810971368_39ae67f86bb04e9e8ff91299627c621d.jpg'],
+            ['S r', 'B-92<br>B-74 B-73', 'C/4904810874812.jpg']]
+    },
+    PL: {
+        name: 'Proto launcher<br>プロトランチャー',
+        desc: '試玩型發射器',
+        colors: [
+            ['St r', 'B-62', '3/4904810872245.jpg'],
+            ['S r', 'B-30 B-29', '/img/launcher/PL.jpg']]
+    }
+})) {
+    const details = document.createElement('details');
+    const src = ([, no, img]) => img ? !/^(https|\/img)/.test(img) ? `https://takaratomymall.jp/img/goods/${img}` : img : `/img/launcher/${no}.jpg`;
+    const winder = {
+        DW: `<ruby><rb>ドラゴンワインダー<rt>Dragon winder</ruby>`,
+        PW: `<ruby><rb>フェニックスワインダー<rt>Phoenix winder</ruby>`,
+        LW: `<ruby><rb>ロングワインダー<rt>Long winder</ruby>`
+    };
+    const spin = {l: 'left', r: 'right'};
+
+    details.innerHTML = `
+    <summary>
+        <h3>${launcher.name}
+            <span>${launcher.desc}</span>
+            <picture><img alt=${abbr} src=${src(launcher.colors[2] || launcher.colors[0])}></picture>
+        </h3>
+    </summary>
+    <section class='boards'></section>`;
+
+    details.querySelector('summary').addEventListener('click', () =>
+        launcher.colors.forEach(([classes, no, img, notes]) => details.querySelector('section').insertAdjacentHTML('beforeend', `
+            <div class='${classes.split(' ').map(c => spin[c] || c).join(' ')}'${notes?.error ? ` data-error='※${notes?.error}'` : ``}>
+                <code>${no}</code>
+                <img src='${src([, no, img])}' alt='${abbr}'>
+                ${winder[notes?.note] || notes?.note || ''}
+            </div>`)
+        ), {once: true});
+
+    abbr === 'LLL' ? Q('article').insertAdjacentHTML('beforeend', '<h2>拉條型</h2>') : null;
+    Q('article').appendChild(details);
+}
+</script>

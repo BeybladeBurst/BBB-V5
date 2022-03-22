@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<script src=/include/common.js></script>
+<title>陀螺部件 ￭ Beyblade Burst parts</title>
+<script src=include/parts.js></script>
+<script src=include/catalog.js></script>
+<link rel=preload as=style href=include/catalog.css onload=this.rel='stylesheet'>
+<link rel=stylesheet href=include/typography.css>
+
+<nav><script>L(() => new nav());</script></nav>
+<db-status></db-status>
+
+<main hidden id=catalog>
+    <h5></h5>
+    <details hidden>
+        <summary data-icon=></summary>
+        <article></article>
+    </details>
+    <div class=filter></div>
+    <section class=catalog></section>
+</main>
+<main hidden id=menu>
+    <div class=tips>除「重量」外，其餘數據及簡介都是直接由官網引用／翻譯，請自行判斷現實情況！</div>
+    <section>
+        <b class=layer>Layer　攻擊環・結晶輪盤</b>
+        <div class=layer style="height:31%;--p:7">
+            <button data-icon="" disabled></button>
+            <button data-icon=""></button>
+            <div>
+                <a href=?layer7 title=Fused></a>
+                <a href=?layer7a title=Armor></a>
+                <a href=?layer7b title=Blade></a>
+                <a href=?layer7c title=Core></a>
+            </div>
+            <div>
+                <a href=?layer6s style="top:28%;left:22%" title=Chassis></a>
+                <a href=?layer6r style="top:28%;left:53%" title=Ring></a>
+                <a href=?layer6c style="top:50%;left:80%" title=Chip></a>
+                <a href=?LB style="top:75%;left:35%" title='LB Ring'></a>
+            </div>
+            <div>
+                <a href=?layer5></a>
+                <a href=?layer5b title=Base></a>
+                <a href=?layer5w title=Weight></a>
+                <a href=?layer5c title=Chip></a>
+            </div>
+            <div>
+                <a href=?remake></a>
+                <a href=?layer4></a>
+                <a href=?layer3></a>
+                <a href=?layer2></a>
+                <a href=?layer1></a>
+            </div>
+        </div>
+        <div class=disk style="top:38%;height:23%">
+            <a href=?LB style="left:38%;top:40%" title='LB Disk'></a>
+            <div style='right:1%;bottom:calc(-20% - 1.5em)'>
+                <a href=?disk3><svg viewBox="0 0 56 20"><use href="#oval"/></svg>Disk 3</a>
+                <a href=?disk1><svg viewBox="0 0 56 20"><use href="#oval"/></svg>Disk 1</a>
+                <a href=?disk2><svg viewBox="-2 0 60 20"><path d="M 10,0 a 10,10,0,0,0,0,20 h 40 l 10,-10 l -10,-10 Z"></path></svg>Disk 2</a>
+                <a href=?frame><svg viewBox="2 0 60 20"><path d="M 50,0 a 10,10,0,0,1,0,20 h -50 l 10,-10 l -10,-10 Z"></path></svg>Frame</a>
+                <b>Disk　金屬輪盤</b>
+            </div>
+        </div>
+        <div class=driver style="top:68%;height:28%">
+            <div style='left:3%;bottom:calc(-29% - 1.6em)'>
+                <a href=?driver4>4</a>
+                <a href=?driver3>3</a>
+                <a href=?driver2>2</a>
+                <a href=?driver1>1</a>
+                <a href=?metal data-icon="✨"></a>
+                <a href=?high data-icon="⇪"></a>
+                <a href=?dash data-icon="⌇"></a>
+                <b>Driver　軸心・底盤</b>
+            </div>
+        </div>
+
+        <svg viewBox="0 0 100 73">
+            <defs>
+                <rect id=round width=20 height=20 rx=10 ry=10></rect>
+                <rect id=oval width=56 height=20 rx=10 ry=10></rect>
+                <marker id=bullseye>
+                    <circle></circle>
+                    <circle></circle>
+                </marker>
+            </defs>
+            <image href="include/parts.svg#layer" width="100" height="73" />
+            <path id='7' d="M 73,12 l -5,0 m 0,0 l 1,1 m -1,-1 l 1,-1 m -1,1 m -15.5,0 l -5,0 m 0,0 l 1,1 m -1,-1 l 1,-1 m -1,1 "/>
+            <path id='6' d="M 71,12 l -3,0 l -3.5,-5 l -3,0 m 0,0 l 1,1 m -1,-1 l 1,-1 m -1,1 m -17,0 l -13.5,0 m 0,0 l 1,1 m -1,-1 l 1,-1 m -1,1 
+            M 68,12 l -3.5,5 l -20.5,0 m 0,0 l 1,1 m -1,-1 l 1,-1 m -1,1 m -16.5,0 l -4,0 l -2.1,3 l 9.1,13 m 0,0 l .4,-1.3 m -.4,1.3 l -1.5,-.3"/>
+            <path id='5' d="M 73,12 l -5,0 m 0,0 l 1,1 m -1,-1 l 1,-1 m -1,1 m -15.5,0 l -5,0 m 0,0 l 1,1 m -1,-1 l 1,-1 m -1,1 "/>
+            <path d='M 50,68 l -6.3,9 l -40,0' marker-start='url(#bullseye)'></path>
+            <path d='M 50,42 l 4.2,6 l 45,0' marker-start='url(#bullseye)'></path>
+        </svg>
+    </section>
+</main>
+<script>
+    let max = page = parseInt(Q('div.layer').style.getPropertyValue('--p'));
+    const hidePath = page => Q(`path[id]`, path => path.style.opacity = path.id == page ? 1 : 0);
+    hidePath(page);
+    Q('button:first-of-type').onclick = ev => {
+        Q('button:last-of-type').disabled = false;
+        Q('div.layer').style.setProperty('--p', ++page);
+        ev.target.disabled = page == max;
+        hidePath(page);
+    };
+    Q('button:last-of-type').onclick = ev => {
+        Q('button:first-of-type').disabled = false;
+        Q('div.layer').style.setProperty('--p', --page);
+        ev.target.disabled = page == 4;
+        hidePath(page);
+    };
+    L(() => {
+        if (Parts.group)
+            return Q('#catalog').hidden = false;
+        Q('.layer a:empty,.disk a:empty', a => a.insertAdjacentHTML('beforeend', `<img src=/img/system-${nav.comp(a.getAttribute('href').substring(1))}.png>`));
+        Q('.driver a', a => a.insertAdjacentHTML('afterbegin', `<svg viewBox="0 0 20 20"><use href="#round"/></svg>`));
+        Q('#menu').hidden = false;
+        Q('style[media]').removeAttribute('media');
+    });
+</script>
+<style media="max-width:1px">
+    main [data-icon]::after {content:attr(data-icon);}
+    a[href='?dash']::after  {color:gold;}
+    a[href='?metal']::after {color:silver;}
+    a[href='?high']::after  {color:magenta;}
+    a[title]::after {
+        content:attr(title);
+        position:absolute;right:0;bottom:0;
+        color:white;line-height:1;
+        text-shadow:0.05em 0.05em 0 var(--theme), -0.05em 0.05em 0 var(--theme), -0.05em -0.05em 0 var(--theme), 0.05em -0.05em var(--theme);
+    }
+    #menu [style],.layer>div {
+        position:absolute;
+    }
+    section {
+        position:relative;
+        max-width:800px;
+        margin:3em auto;
+    }
+    section div {
+        width:100%;
+        z-index:1;
+    }
+    .layer {
+        overflow:hidden;
+    }
+    .layer>div   {
+        height:100%;
+        transition:left .5s;
+        display:flex;justify-content:space-around;align-items:center;
+        padding:0 8%;
+    }
+    .layer>div:nth-last-of-type(4) {left:calc((var(--p) - 7)*100%);}
+    .layer>div:nth-last-of-type(3) {left:calc((var(--p) - 6)*100%);}
+    .layer>div:nth-last-of-type(2) {left:calc((var(--p) - 5)*100%);}
+    .layer>div:last-of-type        {left:calc((var(--p) - 4)*100%);}
+
+    defs~path,.disk>a[href='?LB'] {
+        transition:opacity .5s;
+    }
+    .disk>a[href='?LB'] {
+        opacity:0;
+    }
+    .layer[style*='6']+.disk>a[href='?LB'] {
+        opacity:1;
+    }
+    .disk>div {
+        width:11em;
+        text-align:right;
+    }
+    .disk>div a,.driver a {
+        max-height:2em;line-height:2em;
+        position:relative;
+        display:inline-block;
+        text-align:center;
+    }
+    .disk>div a {
+        width:4em;
+        margin:0 .5em;
+    }
+    .driver a {
+        width:2em;
+    }
+    .driver>div {
+        width:10em;
+        text-align:left;
+    }
+
+    button {
+        position:absolute;bottom:0;
+        z-index:3;
+        border:none;background:none;
+        color:hsl(var(--c),65%,60%);
+        font-size:3em;height:1em;
+        padding:0;
+    }
+    button[disabled] {
+        color:grey;
+    }
+    button:first-of-type {left:0;}
+    button:last-of-type {right:0;}
+
+    a[href^='?layer6'],a[href='?LB'] {
+        transform:translate(-50%,-50%);
+    }
+    .layer a:not([style]) {
+        position:relative;
+    }
+    .layer a,.disk>a {
+        display:inline-block;
+        height:3em;
+    }
+    section a svg {
+        position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+        height:80%;
+        z-index:-1;
+    }
+    section img {
+        height:100%;
+    }
+    section a {
+        filter:drop-shadow(0.25rem -0.25rem 0.2rem hsla(0,0%,0%,0.4)) !important;
+    }
+    section a:hover {
+        filter:brightness(120%) drop-shadow(0.25rem -0.25rem 0.2rem hsla(0,0%,0%,0.4)) !important;
+    }
+    section>b {
+        margin-bottom:.2em;
+        position:absolute;right:.5em;bottom:100%;
+    }
+    b {
+        margin-top:.5rem;
+        display:block;
+        color:hsl(var(--c),var(--s),calc(60% - var(--b)/10));
+        text-shadow:0 0 .05rem hsl(var(--c),var(--s),calc(50% - var(--b)/10));
+    }
+    .disk b {
+        padding-right:.2rem;
+    }
+    .driver b {
+        padding-left:.2rem;
+    }
+
+    /*svg*/
+    svg * {
+        overflow:visible;
+        fill:none;
+    }
+    .driver+svg path {
+        stroke:hsl(var(--c),var(--s),calc(50% - var(--b)/10));
+        stroke-linecap:round;
+        stroke-width:.5;
+    }
+    circle {
+        r:2.5;
+    }
+    rect,.disk path {
+        stroke:hsl(var(--c),80%,50%);
+        stroke-width:1.5;
+        fill:hsla(var(--c),var(--s),70%,.7);
+    }
+    #bullseye circle:first-child {
+        r:3;
+        stroke:hsl(var(--c),var(--s),calc(50% - var(--b)/10));
+    }
+    #bullseye circle:last-child {
+        r:1.5;
+        fill:hsl(var(--c),var(--s),calc(50% - var(--b)/10));
+    }
+</style>
+

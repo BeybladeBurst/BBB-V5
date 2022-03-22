@@ -1,0 +1,381 @@
+/*symbol spacing*/
+h2 {
+    --adj:0em;
+    line-height:calc(1.3em + var(--adj));
+}
+h2.kanji {
+    --adj:.15em; }
+:is(.layer[id^=超],#闇α,#光α) h2 {
+    --adj:.13em; }
+:is(#W) h2 {
+    --adj:.05em; }
+:is(#α,#β) h2 {
+    --adj:-.1em; }
+    
+#SgV h2 {
+    padding-right:.2em;
+}
+a[id^='1']:not([id='11']):not(.single) h2,
+:is(.driver[id^='+'],#C,#Q,a[id$=r],#Et,#Nt,#Rt,#Qc,#Qt,
+#dC,#dF,#oE,#eF):not(.dash) h2 {
+    padding-right:.05em;
+}
+:is(.layer[id$='2'],#Hn,#Op,#Rb,#Sp):not(.dash) h2 {
+    padding-right:0;
+}
+:is(#Cn,#Om,#Sw,#Wd,#Wh,a[id='00'],
+#S2,#V2,#W2,#aB,#kD,
+#zA,#aH,#Db,#SP,#BP,#GD,#WB):not(.dash) h2 {
+    padding-right:0;
+    padding-left:.03em;
+}
+:is(#Ab,#Tw,#Vn,#Ym,#Zn,
+#A2,#J2,#X2,#Y2,#Z2):not(.dash) h2 {
+    padding-right:0;
+    padding-left:.05em;
+}
+
+h2:not(.single)::first-letter {
+    letter-spacing:0em;
+}
+:is(#Ab,#Dr,#Ds,#Gn,#Hy,#Hr,#Kp,#Qc,#Rb,#Rg,#Sp,#Sw,#Vn,#Xc,#Zn,#αn,
+#B2,#D2,#G2,#H2,#N2,#O2,#U2,#aB,#aC,#dC,#dF,#nL,#bR,#Wy,
+#oE,#aH,#aK,#bL,#hS,#bX,#SP,#BP,
+#BH,#BL,#RG,#PH,#πR) h2::first-letter {
+    letter-spacing:-.025em;
+}
+:is(#Wh,a[id^='1']:not(.single),a[id$=′]:not(.high),
+a[id='2D'],a[id='2B'],a[id^='+'],
+#M2,#W2,#bK,#gK,#gV,a[id^=dα],#Un,#Wv,#Cm,
+#gF,#dH,#hK,#dP,#pP,#wV,#Db,#Pα,#BL2,
+a[id^=GD],a[id^=DC],a[id^=DG],a[id^=DR],a[id^=DZ],#WB,
+#Dn) h2::first-letter {
+    letter-spacing:-.05em !important;
+}
+:is(#Hn,#Mb,#Mr,#Op,#Wd,a[id$=m],
+#mG,#SgV) h2::first-letter {
+    letter-spacing:-.075em;
+}
+:is(#Om,a[id='1′']) h2::first-letter {
+    letter-spacing:-.1em;
+}
+#Mm h2::first-letter {
+    letter-spacing:-.125em;
+}
+:is(.layer[id^=超],#闇α,#光α) h2::first-letter {
+    letter-spacing:-.03em;
+}
+:is(.layer[id^=超],#闇α,#光α) h2 {
+    margin-left:-.07em;margin-right:.07em;
+}
+#Mm h2 {
+    transform:scaleX(.9);
+}
+
+:is(#GPg,#HKr,#GPr,#RUn,#MLd,#GRP) h2 {
+    letter-spacing:-.05em;
+    padding-right:.1em;
+    transform:scaleX(.9);
+}
+#GPg h2 {
+    padding-right:.05em !important;
+}
+#GPg h2,#GRP h2 {
+    letter-spacing:-.075em !important;
+}
+#RUn h2 {
+    letter-spacing:-.1em !important;
+}
+:is(#GPg,#HKr,#GPr,#RUn,#MLd,#GRP) h2::first-letter {
+    letter-spacing:-.075em;
+}
+#MLd h2::first-letter {
+    letter-spacing:-.1em !important;
+}
+#SgV h2 {
+    letter-spacing:-.12em;
+}
+:is(#Tp,a[id$='+']) h2 {
+    padding-left:.1em;
+}
+#Hy2 h2 {
+    margin-left:.1em;
+}
+#BL2 sup {
+    margin-left:-.05em;
+}
+:is(a[id^=DG],a[id^=DC],a[id^=DR],a[id^=DZ],#GDV) h2 {
+    letter-spacing:-.03em;
+    margin-left:var(--left);
+}
+:is(a[id^=DG],a[id^=DC],a[id^=DR],a[id^=DZ],#GDV) h2 sup {
+    line-height:.3em;
+}
+a[id$='2'] h2 sup {
+    line-height:.7em;
+}
+:is(a[id^=DC],a[id^=DZ],#DRF,#Lc2) h2 sup {
+    margin-left:.03em;
+}
+#GDV h2 sup {
+    margin-left:-.03em;
+}
+a[id^=DG],a[id^=DC],a[id^=DR],#GDV {
+    --left:.1em; }
+a[id^=DZ] {
+    --left:.15em; }
+#DGV2,#DRV2,#DZV2,#DCV2 {
+    --left:.5em; }
+    
+a[id$='+'] h2 sup {
+    font-size: 0.55em;
+    margin-left: -0.2em;
+    vertical-align: 1em;
+    line-height:.95em;
+}
+#∞L sup {
+    font-size:0.5em;
+    margin-left:-0.3em;
+    vertical-align: 1.15em;
+    line-height:0;
+}
+a[id*='+'] sub {
+    font-family:ANC;font-size:.7em;
+    margin-left:-.25em;
+    letter-spacing:-.1em;
+}
+
+/*text spacing*/
+.catalog>a {
+    --m:-0.5em;--can:-0.7em;--space:0;
+}
+.name-col>div:first-child {
+    margin-right:.2em;
+    text-align:center;
+}
+:lang(zh) {
+    margin:0 -0.2em 0 var(--m); 
+}
+:lang(yue):not(:empty) {
+    margin:0 var(--can); 
+}
+:is(#GDV,#DCS,#DRS,#DGS,#DZS,#DCV,#DRV,#DGV,#DZV,#DCF,#DRF,#DGF,#DZF) :lang(yue) {
+    margin-left:-.4em; }
+:is(#GDV,#DCF) div[class|=name]>div:last-child {
+    margin-left:-.1em; }
+:is(#DGV2,#DCV2,#DZV2,#DRV2) :lang(yue) {
+    margin-left:.5em; }
+    
+.name-row :lang(ja) {
+    letter-spacing:calc(-1em*var(--space));
+}
+.name-row :lang(zh) {
+    letter-spacing:calc(-2em*var(--space)/3);
+    margin-left:-.5em;
+}
+#Dt.layer6c :lang(ja) {
+    --space:1.8;
+}
+#D.layer7b .name-col>div {
+    --space:.7 !important;
+}
+:is(#DGV2,#DZV2,#DRV2,#DCV2) :lang(ja) {
+    margin:0 -.2em;
+}
+:is(#wV,#bX) :lang(en) {
+    letter-spacing:-.01em;
+}
+:is(#eF,#Y2,#wV,#bX,#mG,#gK,#sΩ,#DCF) :lang(yue) {
+    margin-right:calc(var(--can) - .1em);
+}
+:is(#sΩ,#闇α) :lang(en) {
+    letter-spacing:-.02em;
+}
+#闇α :lang(yue) {
+    letter-spacing:-.01em;
+    margin-right:calc(var(--can) - .2em);
+}
+:is(#LL,#GDV) :lang(en) {
+    letter-spacing:-.04em;
+}
+:is(#LL,#GDV) :lang(yue) {
+    letter-spacing:-.03em;
+    margin-right:calc(var(--can) - .2em);
+}
+:is(#Sr,#nL,#Q2,#Pα,#DGV2,#DZV2) :lang(en) {
+    letter-spacing:-.05em;
+}
+:is(#Sr,#nL,#Q2,#Pα,#DGV2,#DZV2) :lang(yue) {
+    letter-spacing:-.04em;
+    margin-right:calc(var(--can) - .2em);
+}
+    
+#光α :lang(en) {
+    letter-spacing:-.075em;
+}
+#光α :lang(yue) {
+    letter-spacing:-.065em;
+    margin-right:calc(var(--can) - .25em);
+}
+#SgV :lang(en) {
+    letter-spacing:-.085em;
+}
+#SgV :lang(yue) {
+    letter-spacing:-.075em;
+    margin-right:calc(var(--can) - .25em);
+}
+
+.name-col :lang(ja) {
+    letter-spacing:calc(-1em*var(--space)/10);
+}
+.name-col :lang(en) {
+    letter-spacing:calc(-1em*var(--space)/30);
+}
+.name-col :lang(zh) {
+    letter-spacing:calc(-1em*var(--space)/40);
+    margin-left:calc(var(--m) - 1em*var(--space)/20);
+}
+@supports (-webkit-touch-callout:none) {
+    .name-col :lang(en) {
+        margin:0 -.05em;
+        letter-spacing:calc(-1em*var(--space)/25);
+    }
+}
+
+:is(#Ev,#Dm,#J.layer5b,#Dt.layer6c) div[class|=name]{
+    margin-left:.05em; }
+:is(#K.layer5b) div[class|=name] {
+    margin-left:.1em; }
+:is(#I.layer5b) div[class|=name]>div:first-child {
+    margin-right:.15em; }
+:is(#J.layer5b,#K.layer5b) div[class|=name]>div:first-child {
+    margin-right:.1em; }
+:is(#I.layer5b,#K.layer5b,#P.layer7b,#Dn.layer7b) :lang(zh) {
+    margin-left:calc(var(--m) - .1em); }
+
+#Dm :lang(ja)::first-letter {
+    letter-spacing:-.22em; }
+#Ev :lang(ja)::first-letter {
+    letter-spacing:-.1em; }
+#Hy.layer6c :lang(ja)::first-letter {
+    letter-spacing:-.07em; }
+    
+:is(#Vl.layer6c,#V.layer5c) :lang(en) {
+    letter-spacing:0; }
+#X.driver :lang(ja) {
+    letter-spacing:-.07em; }
+#Y.driver :lang(ja) {
+    letter-spacing:-.08em; }
+#I.disk :lang(zh) {
+    letter-spacing:-.01em; }
+
+.name :lang(en) {
+    font-size:0.9em;
+    margin-left:0.1em;
+}
+a.high h2::first-letter {
+    letter-spacing:-.05em;
+}
+:is(#HB,#HM,#HH).high h2::first-letter {
+    letter-spacing:-.1em;
+}
+:is(#HZ,#HS).high h2::first-letter {
+    letter-spacing:0;
+}
+:is(#HB,#HJ).high h2 {
+    letter-spacing:-.05em;
+}
+:is(#HH).high h2 {
+    letter-spacing:-.075em;
+}
+:is(#HA).high h2 {
+    letter-spacing:-.1em;
+    padding-right:.05em;
+}
+:is(#HZ,#HS).high h2 {
+    padding-right:.05em;
+}
+#HXt h2 {
+    transform: scaleX(.9);
+    letter-spacing: -0.05em;
+    padding-left: .1em;
+}
+a[id='HXt+'] h2 {
+    transform:scaleX(.8);
+    padding-right:.1em;
+    letter-spacing:-.05em;
+}
+a[id='HXt+'] h2 sup {
+    font-size:.6em;
+    vertical-align: .2em;
+    margin:0 -.5em 0 -.05em;
+}
+a.dash h2 {
+    letter-spacing:calc(1em*var(--space));
+    padding-left:calc(1em*var(--space) + .05em);
+}
+a.dash h2:not(.single) {
+    padding-right:calc(-1em*var(--space) - .05em);
+}
+a.dash h2.single {
+    --space:-.025;}
+:is(#T,#F,#V).dash h2 {
+    --space:0 !important;}
+:is(#Jl,#Ul,#Vl).dash h2  {
+    --space:-.025 !important;}
+:is(#B,#H,#L,#U,#X,#Xc).dash h2 {
+    --space:-.05 !important; }
+:is(#Q,#Ev,#Ig,#Mr,#Qc).dash h2  {
+    --space:-.075 !important; }
+:is(#A,#Ds).dash h2 {
+    --space:-.1 !important; }
+:is(#Kp,#Op,#Sp,#Ch,#Zn).dash h2  {
+    --space:-.125; }
+:is(#Hn,#Rb,#Wv).dash h2  {
+    --space:-.15; }
+:is(#Dm).dash h2  {
+    --space:-.2; }
+:is(#Zt,#Xc,#Zn).dash h2 {
+    padding-left:.1em; }
+#Br.dash h2::first-letter {
+    letter-spacing:-.03em;
+}
+#Dm.dash h2::first-letter {
+    letter-spacing:-.1em;
+}
+
+#α.dash h2 {
+    --adj:0em; }
+:is(#Ul.dash,a[id='HXt+']) :lang(ja) {
+    letter-spacing:-.13em; }
+
+a.metal h2 {
+    transform:scaleX(.9);
+    padding-right:.05em;
+}
+:is(#MA) h2::first-letter {
+    letter-spacing:-.025em;
+}
+:is(#MF,#MD) h2::first-letter {
+    letter-spacing:-.05em;
+}
+:is(#MD).metal h2 {
+    padding-right:0;
+}
+:is(#MS).metal h2 {
+    padding-left:.05em;
+}
+:is(#MDs,#MDr,#MUn) h2 {
+    transform:scaleX(.8);
+    padding-right:.08em;
+    letter-spacing:-.07em;
+}
+:is(#MDr,#MUn) h2 {
+    padding-right:.1em !important;
+}
+#MUn h2 {
+    letter-spacing:-.11em;
+}
+:is(#MDs,#MDr,#MUn) h2::first-letter {
+    letter-spacing:-.11em;
+}

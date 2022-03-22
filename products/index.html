@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<script src=/include/common.js></script>
+<title>陀螺商品 ￭ Beyblade Burst merchandise</title>
+<link rel=stylesheet href=products.css>
+<style></style>
+
+<nav><script>new nav(["home","/parts/"],["","parts"])</script></nav>
+<input type=radio name=system id=DB data-part='[["Core","layer7c"],["Blade","layer7b"],["Armor","layer7a"]]' checked>
+<input type=radio name=system id=SP data-part='[["Chip","layer6c"],["Ring","layer6r"],["Chassis","layer6s"]]'>
+<input type=radio name=system id=GT data-part='[["Chip","layer5c"],["Base","layer5b"],["Weight","layer5w"]]'>
+<main>
+    <db-status></db-status>
+    <form>
+        <svg style="display:none">
+            <polygon id=link points="0,-100 -86.603,-50 -86.603,50 86.603,50 86.603,-50" stroke-width=4 />
+        </svg>
+        <div>
+            <a href=https://beyblade.takaratomy.co.jp/products target=_blank rel=noreferrer>
+                <svg viewBox="-86.603 -100 173.205 150"><use href=#link /></svg>
+                <span data-icon=>官方<br>商品頁面</span>
+            </a>
+            <a href=brochure.html>
+                <svg viewBox="-86.603 -100 173.205 150"><use href=#link transform="rotate(180 0 -25)" /></svg>
+                <span data-icon=>官方<br>陀螺介紹</span>
+            </a>
+        </div>
+        <details>
+            <summary><span>精準檢索Precise search</span><button type=button data-icon= onclick=Search.go()></button></summary>
+            <fieldset>
+                <p class=layer>
+                    <label for=DB><img src=../img/system-layer7.png></label>
+                    <label for=SP><img src=../img/system-layer6.png></label>
+                    <label for=GT><img src=../img/system-layer5.png></label>
+                    <label for=motif>Core</label>
+                    <input type=text name=layer7c id=motif placeholder=g/V/s><br>
+                    <label for=main>Blade</label>
+                    <input type=text name=layer7b id=main placeholder=g/V/s><br>
+                    <label for=key>Armor</label>
+                    <input type=text name=layer7a id=key placeholder=6/1s/斬>
+                <p class=layer>
+                    <label for=layer>Layer</label>
+                    <input type=text name=layer id=layer placeholder=L2/GV/br>
+                <p class=disk>
+                    <label for=disk>Disk</label>
+                    <input type=text name=disk id=disk placeholder=G/4/2v><br>
+                    <label for=frame>Frame</label>
+                    <input type=text name=frame id=frame placeholder=g/V/s>
+                <p class=driver>
+                    <label for=driver>Driver</label>
+                    <input type=text name=driver id=driver placeholder=at/m/RB>
+                <input type=text name=more hidden>
+            </fieldset>
+        </details>
+        <div>
+            <a href=launchers.html>
+                <svg viewBox="-86.603 -100 173.205 150"><use href=#link /></svg>
+                <span data-icon=>各款<br>發射器</span>
+            </a>
+            <a href=#BBG onclick=Table.BBG()>
+                <svg viewBox="-86.603 -100 173.205 150"><use href=#link transform="rotate(180 0 -25)"/></svg>
+                <span data-icon=>更多<br>限定商品</span>
+            </a>
+        </div>
+    </form>
+
+    <details>
+        <summary>顯示／隱藏　Show / Hide</summary>
+        <div>
+            <label for=RLG class=RL>Layer 扭蛋<br>Random Layer Gacha</label>
+            <label for=L class=L>限定商品<br>Limited merchandise</label>
+            <label for=jap>日文名稱<br>Japanese names</label>
+            <label for=eng>英文名稱<br>English names</label>
+        </div>
+    </details>
+    <details>
+        <summary>隱藏異色版陀螺　Hide recolored Beys in</summary>
+        <div>
+            <label for=RB class="RB H">隨機抽包<br>Random Boosters</label>
+            <label for=B class="B H">獨立陀螺<br>Boosters</label>
+            <label for=St class="St H">組合<br>Sets</label>
+            <label for=RL class="RL H">隨機 Layer<br>Random Layer</label>
+        </div>
+    </details>
+    <table id=myTable>
+        <caption class=loading>
+            <span>已顯示Showing</span>
+            <img src=/img/system-layer6.png><img src=/img/system-layer7.png>
+            <data></data>
+            <button onclick=Table.entire()>顯示全部 Show all</button>
+        </caption>
+        <thead>
+        <tr class=comp>
+            <th rowspan=2>No
+            <th colspan=3 class=layer>Layer / Base /<br> Ring / Blade
+            <th colspan=3 class=layer>Chip / Core
+            <th class=layer>
+            <th colspan=3 class=disk>Disk<br> (＋Frame)
+            <th colspan=3 class=driver>Driver
+        <tr class=note>
+            <th colspan=7>
+                <span><img src=chips.svg#MGC>：使用 Metal God Chip / Chip Core
+                <br><img src=chips.svg#LC>：附有 Level Chip</span>
+            <th colspan=3>「_」：不隨附、<br>但可裝 Frame
+            <th colspan=3><ruby>「′」<rt>dash</rt></ruby>：含強彈簧
+        </thead>
+        <tbody></tbody>
+    </table>
+    <table id=BBG>
+        <caption>BBG 限定商品</caption>
+        <tbody></tbody>
+    </table>
+    <section class=boards></section>
+
+    <input type=checkbox id=popup>
+    <label for=popup>
+        <img><img>
+        <div class=catalog></div>
+        <template>
+            <div>
+                <a onclick data-icon=></a>
+                <a href data-icon=><img></a>
+            </div>
+        </template>
+    </label>
+</main>
+
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js></script>
+<script src=search.js></script>
+<script src=image.js></script>
+<script src=row.js></script>
+<script src=/include/tablesorter.js></script>
+<script src=/parts/include/catalog.js></script>
+
+<script>
+    const Table = {
+        limit: 'B-159',
+        async get() {
+            Table.loading(true);
+            names = names || await DB.getNames();
+            const [newer, older] = [await DB.get('html', `prod-new`), await DB.get('html', `prod-old`)];
+            if (!newer || !older || /^#(flush|update)$/.test(window.location.hash))
+                return Table.fetch(window.location.hash == '#update' ? older : false);
+            Q('tbody').innerHTML = newer + (Table.limit ? older.replace(/<tr/g, '<tr hidden') : older);
+            Table.loading(false);
+        },
+        async fetch(old) {
+            Table.loading(true);
+            const [newer, older] = await Promise.all([
+                fetch('/update/product-new.json').then(r => r.json()),
+                old ? old : fetch('/update/product-old.json').then(r => r.json())
+            ]);
+            Row.show = true;
+            names = names || await DB.getNames();
+            for (const bey of [...newer, ...typeof older == 'object' ? older : []]) new Row(bey);
+            Table.save(old);
+            Table.loading(false);
+        },
+        save(old) {
+            DB.put('html', ['prod-new', Table.sanitize('tbody tr:not([hidden])')]);
+            Cookie.setHistory('products');
+            if (old)
+                Q('tbody').insertAdjacentHTML('beforeend', Table.limit ? old.replace(/<tr/g, '<tr hidden') : old);
+            else
+                DB.put('html', ['prod-old', Table.sanitize('tbody tr[hidden]')]);
+        },
+        sanitize(elements) {
+            const temp = document.createElement('template');
+            temp.innerHTML = [...document.querySelectorAll(elements)].map(tr => tr.outerHTML).join('');
+            for (const td of temp.content.querySelectorAll('td.left, td.right'))
+                td.innerHTML = td.innerHTML.replace(/.*?(<sub>.*?<\/sub>).*?/, '$1');
+            return temp.innerHTML.replace(/(<\/t[d|r]>|\s{2,}|=""|hidden|\s(?=>))/g, '');
+        },
+        loading(loading) {
+            Q('input[type=text]', input => {
+                input.value = loading ? 'Loading' : '';
+                input.disabled = loading;
+            });
+            Q('caption').classList[loading ? 'add' : 'remove']('loading');
+            if (loading) return Q('tbody').innerHTML = '';
+            window.location.hash == '#BBG' ? Table.BBG() : null;
+            Q('tr', tr => Row.connectedCallback(tr));
+            !Search.go() ? Q('nav data').value = '' : null;
+            Table.count();
+            Table.flush();
+            $('table').tablesorter();
+        },
+        count() {
+            if (!Table.limit) return;
+            Q('main data').innerHTML = count('#myTable tbody tr:not([hidden])');
+            Q('main data').value = count('#myTable tbody tr');
+        },
+        entire() {
+            Q('tbody tr[hidden]', tr => tr.hidden = false);
+            Table.limit = false;
+            Q('caption').innerHTML = '';
+        },
+        reset() {
+            Search.state(false);
+            window.location.search ? window.history.pushState('', '', '/products/') : null;
+            Q('th[data-sortedBy]') ? Table.get() : Q('#myTable tbody tr', tr => tr.hidden = tr.matches(`tr[data-no="${Table.limit}"]~tr`));
+            Q('#BBG tr', tr => tr.hidden = false);
+            Table.count();
+        },
+        column(lang) {
+            const colspan = {eng: [5, 1], cjk: [1, 5]}[lang] || [2, 4];
+            Q('td[data-part$=layer], td:not([data-part]):nth-child(2)', td => td.next2().forEach((td, i) => td.colSpan = colspan[i]));
+        },
+        flush(update = false) {
+            if (window.innerWidth >= 800 || window.innerWidth > window.innerHeight)
+                Table.column(Q('#jap').checked ? 'cjk' : 'both');
+            else
+                Table.column(Q('#eng').checked ? 'eng' : 'cjk');
+            update ? $("table").trigger('update', [false]) : null;
+        },
+        async BBG() {
+            if (Q('#BBG tr')) return;
+            const html = await DB.get('html', 'prod-BBG');
+            if (html)
+                Q('#BBG tbody').innerHTML = html;
+            else {
+                Row.show = true;
+                for (const bey of await (await fetch('/update/product-BBG.json')).json()) new Row(bey, '#BBG tbody');
+                DB.put('html', ['prod-BBG', Table.sanitize(`#BBG tr`)]);
+            }
+            Q('tr', tr => Row.connectedCallback(tr));
+            Q('#myTable tr[data-no^=BBG]', tr => tr.remove());
+            Table.flush(true);
+            Table.count();
+            Q('section').innerHTML =
+            [
+                ['39', '/img/launcher/BBG-39L.jpg', '<h5>カスタムベイランチャー LR<br>Custom Bey launcher LR</h5>'],
+                ['39', '/img/launcher/BBG-39S.jpg', '<h5>カスタムベイランチャー LR<br>Custom Bey launcher LR</h5>'],
+                ['39', '/img/launcher/BBG-39F.jpg', '<h5>カスタムベイランチャー LR<br>Custom Bey launcher LR</h5>'],
+                ['38'],
+                ['29', '/img/launcher/BBG-29.jpg', '<h5>ロングベイランチャー LR<br>Long Bey launcher LR</h5><ruby><rb>ゴールド<rt>Gold</ruby>'],
+                ['26'],
+                ['25', 'https://www.suruga-ya.jp/database/pics_light/game/607137341.jpg', '<h5>ビッグベイスタジアム<br>Big Bey stadium'],
+                ['24', '/img/launcher/BBG-24.jpg', '<h5>ロングベイランチャー L<br>Long Bey launcher L</h5><ruby><rb>シルバー<rt>Silver</ruby>'],
+                ['23', '/img/launcher/BBG-23.jpg', '<h5>ロングベイランチャー<br>Long Bey launcher</h5><ruby><rb>ゴールド<rt>Gold</ruby>'],
+                ['17', '/img/launcher/BBG-17.jpg', '<h5>ベイランチャー LR<br>Bey launcher LR</h5><ruby><rb>ゴールド<rt>Gold</ruby>'],
+                ['16', '/img/grip/rubber-phoenix.jpg', '<h5>ラバーランチャーグリップ<br>Rubber launcher grip</h5><ruby><rb>フェニックス<rt>Phoenix</ruby>'],
+                ['10', '/img/grip/rubber-red.jpg', '<h5>ラバーランチャーグリップ<br>Rubber launcher grip</h5><ruby><rb>レッド<rt>Red</ruby>'],
+                ['05', '/img/grip/power-blue.jpg', '<h5>パワーランチャーグリップ<br>Power launcher grip</h5><ruby><rb>スカイブルー<rt>Sky blue</ruby>'],
+                ['04',],
+                ['03', '/img/launcher/BBG-03.jpg', '<h5>ベイランチャー<br>Bey launcher</h5><ruby><rb>クリアブルー<rt>Clear blue</ruby>'],
+                ['01', 'https://beyblade.takaratomy.co.jp/category/img/products/B_00.png', '<h5>ベイスタジアム<br>Bey stadium</h5><ruby><rb>クリア<rt>Clear</ruby>'],
+            ].map(([code, img, text]) => `<div><code>BBG-${code}</code>${img ? `<img src=${img} alt=BBG-${code}>` : ''}${text || '不明'}</div>`).join('');
+        }
+    }
+    Table.get();
+    window.onresize = () => Table.flush();
+
+    (() => {
+        const show = ["RB", "B", "St", "RL", "RLG", "L", "jap", "eng"];
+        Q('style').insertAdjacentHTML('beforeend', `
+            ${show.map((id, i) => `#${id}:not(:checked)~main table .${id}${i <= 3 ? '.H' : ''}`)} {display:none}
+            ${show.map(id => `#${id}:not(:checked)~main label[for=${id}]`)} {opacity:.5;background-color:initial;}`
+        );
+        show.forEach(id => Q('main').insertAdjacentHTML('beforebegin', `<input type=checkbox id=${id} ${/^(eng|jap)$/.test(id) ? '' : 'checked'}>`));
+    })();
+
+    Q('input[name=system]', radio => radio.onchange = () =>
+        JSON.parse(radio.getAttribute('data-part')).forEach((part, i) => {
+            const input = Q(`.layer input:nth-of-type(${i + 1})`);
+            [input.previousElementSibling.innerText, input.name] = part;
+        })
+    );
+    Q('#jap').onchange = ({target}) => {
+        Q('#eng').checked = false;
+        Q('#eng').disabled = target.checked;
+        Q('tbody tr', tr => Row.fill([null, target.checked ? 'jap' : 'chi'], tr));
+        Table.flush();
+    };
+    Q('#eng').onchange = ({target}) => Table.column(target.checked ? 'eng' : 'cjk');
+    Q('input[type=text]', input => input.onkeypress = ({code}) => code == 'Enter' ? Search.go() : null);
+</script>
+
+<script async src=/parts/include/parts.js></script>
+<link rel=stylesheet href=/parts/include/catalog.css>
+<link rel=stylesheet href=/parts/include/typography.css>
